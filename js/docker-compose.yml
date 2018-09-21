@@ -1,0 +1,10 @@
+version: "2"
+services:
+  node:
+    build:
+      context: .
+    ports:
+      - "3000:3000"
+    #container_name: arq_js
+
+# docker build -t arq_js .

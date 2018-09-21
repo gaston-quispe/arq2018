@@ -1,0 +1,10 @@
+version: "2"
+services:
+  python:
+    build:
+      context: .
+    ports:
+      - "8000:8000"
+    #container_name: arq_py
+
+# docker build -t arq_py .
