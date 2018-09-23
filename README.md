@@ -1,8 +1,14 @@
 # Cosas de nosotros:
 
--2c18-tp-1/py > docker build -t arq_py .
--2c18-tp-1/js > docker build -t arq_js .
--2c18-tp-1 > docker-compose up -d
+* 2c18-tp-1/py > docker build -t arq_py .
+* 2c18-tp-1/js > docker build -t arq_js .
+* 2c18-tp-1 > docker-compose up -d
+
+## Test timeout
+Dentro de  la carpeta perf:
+
+* ./timeout.sh -e gunicorn
+* ./timeout.sh -e node
 
 # Punto de partida para el TP 1 de Arquitectura de Software (75.73) del 2do cuatrimestre de 2018
 

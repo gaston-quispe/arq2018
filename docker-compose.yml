@@ -2,16 +2,16 @@ version: '2'
 
 services:
 
-    gunicorn:
+    gunicorn: # 1:26:40
         image: arq_py #Gunicorn
         #build:
         #    context: ./py
-        ports:
-            - "8000:8000"
+        ports: # Exposicion de puertos
+            - "8000:8000"  #PUERTO_UBUNTU:PUERTO_CONTAINER
     node:
         image: arq_js #Node
         ports:
-            - "3000:3000"
+            - "3000:3000"  #PUERTO_UBUNTU:PUERTO_CONTAINER
 
     nginx:
         image: nginx:1.15.3

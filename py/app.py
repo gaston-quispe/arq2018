@@ -4,18 +4,18 @@ import datetime
 
 app = Flask(__name__)
 
-TIMEOUT = 2
+TIMEOUT = 10
 
 @app.route("/")
 def root(): #Puede colocarse cualquier nombre (14:00)
-    return "Hola mundo desde Gunicorn!"
+    return "Hola mundo desde Gunicorn!\n"
 
 @app.route("/timeout/")
 def timeout():
     time.sleep(TIMEOUT)
     msg = "Hola mundo desde unicorn timeout! > "
     msg += datetime.datetime.fromtimestamp(time.time()).strftime('%Y-%m-%d %H:%M:%S')
-    return msg
+    return msg + "\n"
 
 if __name__ == "__main__":
     app.run()
