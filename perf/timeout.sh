@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # Usarlo asi
-# ./timeout.sh -e gunicorn
-# ./timeout.sh -e node
+# ./timeout.sh gunicorn
+# ./timeout.sh node
 
 if [ "$1" == "gunicorn" ]
 then
