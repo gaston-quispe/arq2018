@@ -1,8 +1,8 @@
 {
   "__inputs": [
     {
-      "name": "DS_GRAPHITE",
-      "label": "Graphite",
+      "name": "DS_ARQUITECTURA",
+      "label": "arquitectura",
       "description": "",
       "type": "datasource",
       "pluginId": "graphite",
@@ -46,7 +46,7 @@
   "gnetId": null,
   "graphTooltip": 0,
   "id": null,
-  "iteration": 1536439212720,
+  "iteration": 1538349356271,
   "links": [],
   "panels": [
     {
@@ -54,7 +54,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "${DS_GRAPHITE}",
+      "datasource": "${DS_ARQUITECTURA}",
       "fill": 7,
       "gridPos": {
         "h": 7,
@@ -157,7 +157,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "${DS_GRAPHITE}",
+      "datasource": "${DS_ARQUITECTURA}",
       "fill": 7,
       "gridPos": {
         "h": 7,
@@ -248,7 +248,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "${DS_GRAPHITE}",
+      "datasource": "${DS_ARQUITECTURA}",
       "fill": 1,
       "gridPos": {
         "h": 7,
@@ -351,7 +351,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": "${DS_GRAPHITE}",
+      "datasource": "${DS_ARQUITECTURA}",
       "fill": 1,
       "gridPos": {
         "h": 7,
@@ -485,18 +485,18 @@
           },
           {
             "selected": false,
-            "text": "artillery_gunicorn",
-            "value": "artillery_gunicorn"
+            "text": "artillery-gunicorn",
+            "value": "artillery-gunicorn"
           }
         ],
-        "query": "artillery-node, artillery_gunicorn",
+        "query": "artillery-node, artillery-gunicorn",
         "type": "custom"
       },
       {
         "allValue": null,
         "current": {
-          "text": "tp-arq-docker_node_1",
-          "value": "tp-arq-docker_node_1"
+          "text": "arq2018_nginx_1",
+          "value": "arq2018_nginx_1"
         },
         "hide": 0,
         "includeAll": false,
@@ -506,51 +506,36 @@
         "options": [
           {
             "selected": true,
-            "text": "tp-arq-docker_node_1",
-            "value": "tp-arq-docker_node_1"
+            "text": "arq2018_nginx_1",
+            "value": "arq2018_nginx_1"
           },
           {
             "selected": false,
-            "text": "tp-arq-docker_node_2",
-            "value": "tp-arq-docker_node_2"
+            "text": "arq2018_node_1",
+            "value": "arq2018_node_1"
           },
           {
             "selected": false,
-            "text": "tp-arq-docker_node_3",
-            "value": "tp-arq-docker_node_3"
+            "text": "arq2018_gunicorn_1",
+            "value": "arq2018_gunicorn_1"
           },
           {
             "selected": false,
-            "text": "tp-arq-docker_cadvisor_1",
-            "value": "tp-arq-docker_cadvisor_1"
+            "text": "arq2018_cadvisor_1",
+            "value": "arq2018_cadvisor_1"
           },
           {
             "selected": false,
-            "text": "tp-arq-docker_flask_1",
-            "value": "tp-arq-docker_flask_1"
+            "text": "arq2018_graphite_1",
+            "value": "arq2018_graphite_1"
           },
           {
             "selected": false,
-            "text": "tp-arq-docker_grafana_1",
-            "value": "tp-arq-docker_grafana_1"
-          },
-          {
-            "selected": false,
-            "text": "tp-arq-docker_graphite_1",
-            "value": "tp-arq-docker_graphite_1"
-          },
-          {
-            "selected": false,
-            "text": "tp-arq-docker_gunicorn_1",
-            "value": "tp-arq-docker_gunicorn_1"
-          },
-          {
-            "selected": false,
-            "text": "tp-arq-docker_nginx_1",
-            "value": "tp-arq-docker_nginx_1"
+            "text": "arq2018_grafana_1",
+            "value": "arq2018_grafana_1"
           }
         ],
-        "query": "tp-arq-docker_node_1, tp-arq-docker_node_2, tp-arq-docker_node_3, tp-arq-docker_cadvisor_1, tp-arq-docker_flask_1, tp-arq-docker_grafana_1, tp-arq-docker_graphite_1, tp-arq-docker_gunicorn_1, tp-arq-docker_nginx_1",
+        "query": "arq2018_nginx_1, arq2018_node_1, arq2018_gunicorn_1, arq2018_cadvisor_1, arq2018_graphite_1, arq2018_grafana_1",
         "type": "custom"
       }
     ]
@@ -585,7 +570,7 @@
     ]
   },
   "timezone": "",
-  "title": "Main dashboard",
+  "title": "Dashboard Clase",
   "uid": "arxIPammk",
   "version": 4
 }

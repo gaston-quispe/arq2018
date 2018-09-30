@@ -1,4 +1,4 @@
-# Como levantar la aplicacion:
+## Como levantar la aplicacion:
 
 * 2c18-tp-1/py > docker build -t arq_py .
 * 2c18-tp-1/js > docker build -t arq_js .
@@ -7,8 +7,8 @@
 ## Test timeout
 Dentro de  la carpeta perf:
 
-* ./timeout.sh -e gunicorn
-* ./timeout.sh -e node
+* ./run-timeout.sh -e gunicorn
+* ./run-timeout.sh -e node
 
 # Punto de partida para el TP 1 de Arquitectura de Software (75.73) del 2do cuatrimestre de 2018
 
