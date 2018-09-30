@@ -1,4 +1,4 @@
-# Cosas de nosotros:
+# Como levantar la aplicacion:
 
 * 2c18-tp-1/py > docker build -t arq_py .
 * 2c18-tp-1/js > docker build -t arq_js .

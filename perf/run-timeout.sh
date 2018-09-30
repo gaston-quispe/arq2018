@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # Usarlo asi
-# ./timeout.sh gunicorn
-# ./timeout.sh node
+# ./run-timeout.sh gunicorn
+# ./run-timeout.sh node
 
 if [ "$1" == "gunicorn" ]
 then
@@ -29,5 +29,3 @@ else if [ "$1" == "node" ]
         curl -o /dev/null -s -w 'Tiempo total request 3: %{time_total}\n' http://localhost:5555/node/timeout/ &
     fi
 fi
-
-# https://stackoverflow.com/questions/18215389/how-do-i-measure-request-and-response-times-at-once-using-curl

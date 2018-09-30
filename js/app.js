@@ -23,10 +23,7 @@ app.get("/timeout/", (req, res) => {
         // los calculos dentro de este bloque terminen.
         res.send("Finalizada peticion asincronica!\n");
     }, TIMEOUT);
-    // Esto de abajo no deberia ir creo...
-    // Creo q deberia ir dentro del timeout
-    // No tendria sentido hacer el send aca antes de que el
-    // setTimeOut finailce -> Investigar mas
+    
     //res.send("Recibida peticion asincronica!\n");
 });
 

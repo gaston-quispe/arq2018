@@ -7,7 +7,7 @@ app = Flask(__name__)
 TIMEOUT = 10
 
 @app.route("/")
-def root(): #Puede colocarse cualquier nombre (14:00)
+def root():
     return "Hola mundo desde Gunicorn!\n"
 
 @app.route("/timeout/")

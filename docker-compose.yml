@@ -2,11 +2,9 @@ version: '2'
 
 services:
 
-    gunicorn: # 1:26:40
+    gunicorn:
         image: arq_py #Gunicorn
-        #build:
-        #    context: ./py
-        ports: # Exposicion de puertos
+        ports:
             - "8000:8000"  #PUERTO_UBUNTU:PUERTO_CONTAINER
     node:
         image: arq_js #Node
@@ -22,11 +20,8 @@ services:
             - ./store/static/files:/static:ro
         links:
             - gunicorn
-           # - node
+            - node
 
-    #artillery:
-    #    image:
-    #    ports:
 
     graphite:
         image: graphiteapp/graphite-statsd:1.1.3
