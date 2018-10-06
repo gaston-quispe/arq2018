@@ -14,17 +14,47 @@ config:
           host: localhost
           port: 8125
           prefix: "artillery-gunicorn"
-  
+
+    node-timeout:
+      target: 'http://localhost:5555/node/timeout/'
+      plugins:
+        statsd:
+          host: localhost
+          port: 8125
+          prefix: "artillery-node"
+    gunicorn-timeout:
+      target: 'http://localhost:5555/gunicorn/timeout/'
+      plugins:
+        statsd:
+          host: localhost
+          port: 8125
+          prefix: "artillery-gunicorn" 
+
+    node-intensivo:
+      target: 'http://localhost:5555/node/intensivo/'
+      plugins:
+        statsd:
+          host: localhost
+          port: 8125
+          prefix: "artillery-node"
+    gunicorn-intensivo:
+      target: 'http://localhost:5555/gunicorn/intensivo/'
+      plugins:
+        statsd:
+          host: localhost
+          port: 8125
+          prefix: "artillery-gunicorn"           
+
   pool: 50 # All HTTP requests from all virtual users will be sent over the same connections
 
   phases:
-    - duration: 60
+    - duration: 30
       arrivalRate: 5
+    - duration: 90
+      arrivalRate: 5
+      rampTo: 30 #300 requests cada 10 seg.
     - duration: 120
-      arrivalRate: 5
-      rampTo: 50
-    - duration: 600
-      arrivalRate: 50
+      arrivalRate: 30
 
 scenarios:
   - name: Root (/)

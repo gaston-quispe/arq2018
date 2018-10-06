@@ -4,6 +4,8 @@
 * 2c18-tp-1/js > docker build -t arq_js .
 * 2c18-tp-1 > docker-compose up -d
 
+sudo docker exec -it arq2018_gunicorn_1 /bin/bash
+
 ## Test timeout
 Dentro de  la carpeta perf:
 
