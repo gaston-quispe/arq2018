@@ -7,6 +7,7 @@ config:
           host: localhost
           port: 8125
           prefix: "artillery-node"
+
     gunicorn:
       target: 'http://localhost:5555/gunicorn'
       plugins:
@@ -22,6 +23,7 @@ config:
           host: localhost
           port: 8125
           prefix: "artillery-node"
+
     gunicorn-timeout:
       target: 'http://localhost:5555/gunicorn/timeout/'
       plugins:
@@ -37,6 +39,7 @@ config:
           host: localhost
           port: 8125
           prefix: "artillery-node"
+          
     gunicorn-intensivo:
       target: 'http://localhost:5555/gunicorn/intensivo/'
       plugins:
