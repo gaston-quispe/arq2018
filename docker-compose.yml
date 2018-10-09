@@ -6,10 +6,12 @@ services:
         image: arq_py #Gunicorn
         #ports:
             #- "8000:8000"  #PUERTO_UBUNTU:PUERTO_CONTAINER
+    
     node:
         image: arq_js #Node
         #ports:
             #- "3000:3000"  #PUERTO_UBUNTU:PUERTO_CONTAINER
+
 
     nginx:
         image: nginx:1.15.3
@@ -32,6 +34,9 @@ services:
             - "8090:80"
             - "8125:8125/udp"
             - "8126:8126"
+        links:
+            - gunicorn
+            - node
 
     grafana:
         image: grafana/grafana:5.0.4
@@ -39,6 +44,11 @@ services:
             - "80:3000"
         volumes:
             - "grafana_config:/var/lib/grafana"
+        links:
+            - gunicorn
+            - node
+            - graphite
+            - cadvisor
 
     cadvisor:
         image: google/cadvisor:v0.27.4
@@ -52,6 +62,10 @@ services:
             - "/var/run:/var/run:rw"
             - "/sys:/sys:ro"
             - "/var/lib/docker/:/var/lib/docker:ro"
+        links:
+            - gunicorn
+            - node
+            - graphite
 
 volumes:
     grafana_config:

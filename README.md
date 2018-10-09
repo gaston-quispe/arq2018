@@ -8,8 +8,11 @@
 sudo docker exec -it arq2018_gunicorn_1 /bin/bash
 sudo docker exec -it arq2018_nginx_1 /bin/bash
 
-# Levantar containers clonados
-docker-compose up -d --scale node=3
+# Levantar containers clonado
+docc up -d --scale gunicorn=3 --scale node=3
+
+# Conexion statsd
+telnet localhost 8126
 
 ## Test timeout
 Dentro de  la carpeta perf:

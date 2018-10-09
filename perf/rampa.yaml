@@ -8,6 +8,14 @@ config:
           port: 8125
           prefix: "artillery-node"
 
+    node-replicated:
+      target: 'http://localhost:5555/node-replicated'
+      plugins:
+        statsd:
+          host: localhost
+          port: 8125
+          prefix: "artillery-node"
+
     gunicorn:
       target: 'http://localhost:5555/gunicorn'
       plugins:
@@ -16,8 +24,24 @@ config:
           port: 8125
           prefix: "artillery-gunicorn"
 
+    gunicorn-replicated:
+      target: 'http://localhost:5555/gunicorn-replicated'
+      plugins:
+        statsd:
+          host: localhost
+          port: 8125
+          prefix: "artillery-gunicorn"
+
     node-timeout:
-      target: 'http://localhost:5555/node/timeout/'
+      target: 'http://localhost:5555/node/timeout'
+      plugins:
+        statsd:
+          host: localhost
+          port: 8125
+          prefix: "artillery-node"
+
+    node-replicated-timeout:
+      target: 'http://localhost:5555/node-replicated/timeout'
       plugins:
         statsd:
           host: localhost
@@ -25,7 +49,15 @@ config:
           prefix: "artillery-node"
 
     gunicorn-timeout:
-      target: 'http://localhost:5555/gunicorn/timeout/'
+      target: 'http://localhost:5555/gunicorn/timeout'
+      plugins:
+        statsd:
+          host: localhost
+          port: 8125
+          prefix: "artillery-gunicorn" 
+
+    gunicorn-replicated-timeout:
+      target: 'http://localhost:5555/gunicorn-replicated/timeout'
       plugins:
         statsd:
           host: localhost
@@ -33,20 +65,37 @@ config:
           prefix: "artillery-gunicorn" 
 
     node-intensivo:
-      target: 'http://localhost:5555/node/intensivo/'
+      target: 'http://localhost:5555/node/intensivo'
       plugins:
         statsd:
           host: localhost
           port: 8125
           prefix: "artillery-node"
-          
-    gunicorn-intensivo:
-      target: 'http://localhost:5555/gunicorn/intensivo/'
+    
+    node-replicated-intensivo:
+      target: 'http://localhost:5555/node-replicated/intensivo'
       plugins:
         statsd:
           host: localhost
           port: 8125
-          prefix: "artillery-gunicorn"           
+          prefix: "artillery-node"
+
+    gunicorn-intensivo:
+      target: 'http://localhost:5555/gunicorn/intensivo'
+      plugins:
+        statsd:
+          host: localhost
+          port: 8125
+          prefix: "artillery-gunicorn"
+    
+    gunicorn-replicated-intensivo:
+      target: 'http://localhost:5555/gunicorn-replicated/intensivo'
+      plugins:
+        statsd:
+          host: localhost
+          port: 8125
+          prefix: "artillery-gunicorn"
+          
 
   pool: 50 # All HTTP requests from all virtual users will be sent over the same connections
 

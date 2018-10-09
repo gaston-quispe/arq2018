@@ -1,6 +1,7 @@
 from flask import Flask
 import time
 import datetime
+import sys
 
 app = Flask(__name__)
 
@@ -16,6 +17,7 @@ def timeout():
     time.sleep(TIMEOUT)
     msg = "Hola mundo desde unicorn timeout! > "
     msg += datetime.datetime.fromtimestamp(time.time()).strftime('%Y-%m-%d %H:%M:%S')
+    print(msg + "\n")
     return msg + "\n"
 
 @app.route("/intensivo/")
