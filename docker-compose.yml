@@ -4,12 +4,12 @@ services:
 
     gunicorn:
         image: arq_py #Gunicorn
-        ports:
-            - "8000:8000"  #PUERTO_UBUNTU:PUERTO_CONTAINER
+        #ports:
+            #- "8000:8000"  #PUERTO_UBUNTU:PUERTO_CONTAINER
     node:
         image: arq_js #Node
-        ports:
-            - "3000:3000"  #PUERTO_UBUNTU:PUERTO_CONTAINER
+        #ports:
+            #- "3000:3000"  #PUERTO_UBUNTU:PUERTO_CONTAINER
 
     nginx:
         image: nginx:1.15.3

@@ -8,6 +8,9 @@
 sudo docker exec -it arq2018_gunicorn_1 /bin/bash
 sudo docker exec -it arq2018_nginx_1 /bin/bash
 
+# Levantar containers clonados
+docker-compose up -d --scale node=3
+
 ## Test timeout
 Dentro de  la carpeta perf:
 
