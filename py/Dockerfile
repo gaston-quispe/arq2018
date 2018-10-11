@@ -3,7 +3,7 @@ RUN mkdir /usr/app
 WORKDIR /usr/app
 COPY app.py .
 RUN pip install flask gunicorn
-ENTRYPOINT ["gunicorn", "-w", "17", "app:app", "--error-logfile", "error-log-file.log", "--log-file", "log-file.log", "-b", "0.0.0.0:8000"]
+ENTRYPOINT ["gunicorn", "-w", "9", "app:app", "--error-logfile", "error-log-file.log", "--log-file", "log-file.log", "-b", "0.0.0.0:8000"]
 
 # docker build -t arq_py .
 
